@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="../js_files/socket.io.js"></script>
+    <title>Chat Page</title>
+</head>
+<body>
+    <div class="input-box" id="input-box">
+        <form onsubmit="return setRoomName()">
+            <input type="text" id="userName" placeholder="Enter Your Name..." required="true"><br>
+            <input type="text" id="roomID" placeholder="Enter the room id..." required="true"><br>
+
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <div id="chat-info">
+        <b id="chat-user"></b>
+        <p id="client_count"></p>
+        <p id='typing_status'></p>
+        <b id="chat-room"></b>
+    </div>
+
+    <div class="chat-box" id="chat-box">
+        <div id="output">
+
+        </div>
+        
+    </div>
+
+    <div class="handler" id="handler">
+        <form onsubmit="return emitMessage()">
+        <input type="text" id="message" placeholder="Type a Message...." required="true">
+        <button>Submit</button>
+        </form>
+    </div>
+
+    <script src='../js_files/chat.js'></script>
+</body>
+</html>
